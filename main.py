@@ -25,6 +25,17 @@ SEED_URLS = [
     "https://summitov.com/",
     "https://summitov.com/tickets/",
 ]
+# =========================
+# SOCIAL ACCOUNTS (CONFIG ONLY)
+# =========================
+SOCIAL_ACCOUNTS = {
+    "instagram": "summitov",
+    "facebook": "https://www.facebook.com/SummitOV/",
+    "twitter": "https://twitter.com/summitOV",
+    "linkedin": "https://www.linkedin.com/company/summit-one-vanderbilt/",
+    "tiktok": "https://www.tiktok.com/@summitov",
+    "youtube": "https://www.youtube.com/channel/UCE7l8RccNbjuc_h_Rp3vriQ"
+}
 
 DB_PATH = os.getenv("DB_PATH", "data.db")
 API_KEY = os.getenv("API_KEY", "")  # optional auth for /refresh
@@ -242,3 +253,4 @@ def search(q: str, since_days: int = 30):
         return {"results": [i.dict() for i in items]}
     finally:
         conn.close()
+
